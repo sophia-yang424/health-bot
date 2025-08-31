@@ -8,4 +8,4 @@
 5. Set up the DBeaver app to connect to your PostgreSQL databae
 6. In DBeaver, execute the SQL statements in create_chainlit_data_layer_tables.sql file to create the tables needed for Chainlit data layer for data persistence
 7. Uncomment line 196 in Chatbot.py for the first time run. Line 196 is `# await checkpointer.setup()`. line 196 need to run ONLY ONCE. So comment it out after the first time run.
-8. Run `chainlit run chatbot_example.py` to start the chatbot. It should automatically open the Chatbot login page in your default web browser. Use "admin" for your user name (no password needed) - for development purpose only, NOT FOR PRODUCTION USE. Secure authentication and authorization methods are necessary for production deployment.
+8. Run `chainlit run health-bot.py` to start the chatbot. It should automatically open the Chatbot login page in your default web browser. Use "admin" for your user name (no password needed) - for development purpose only, NOT FOR PRODUCTION USE. Secure authentication and authorization methods are necessary for production deployment.

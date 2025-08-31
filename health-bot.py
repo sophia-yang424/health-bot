@@ -1,7 +1,9 @@
+import asyncio
 import logging
 import os
 from typing import Annotated, Literal, Optional
 from typing_extensions import TypedDict
+import sys
 
 import chainlit as cl
 from chainlit.data.sql_alchemy import SQLAlchemyDataLayer
@@ -19,6 +21,10 @@ from langchain.schema.runnable.config import RunnableConfig
 from langchain_openai import ChatOpenAI
 from psycopg_pool import AsyncConnectionPool
 from psycopg.rows import dict_row
+
+
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 tavily_search = TavilySearch(
