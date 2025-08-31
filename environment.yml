@@ -1,0 +1,20 @@
+name: chatbot-env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - asyncpg
+      - chainlit
+      - aiohttp
+      - greenlet
+      - ipykernel
+      - langchain
+      - langchain-openai
+      - langchain-tavily
+      - langgraph
+      - langgraph-checkpoint-postgres
+      - psycopg[binary,pool]
+      - sqlalchemy

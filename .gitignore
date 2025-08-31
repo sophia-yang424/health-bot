@@ -1,0 +1,16 @@
+.ipynb_checkpoints
+__pycache__/
+*.pyc
+untitled*.*
+Untitled*.*
+*.bak
+*secret*
+.env
+.env.local
+.vscode/
+.DS_Store
+logs/
+*.log
+
+# chainlit message attachments, not needed to be tracked
+.files
