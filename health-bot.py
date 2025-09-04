@@ -24,7 +24,7 @@ from psycopg.rows import dict_row
 
 #the graph is a blueprint built the includes the chosen settings
 # but only state/history is persisted by the checkpointer during runs.
-
+#our state schema is only messages
 
 
 #this is for windows users since it assumes linux
@@ -69,9 +69,10 @@ def create_graph(model: str,  temperature: float, tools: list, system_prompt: st
 
 
 #in langgraph is it built in all the nodes see the state aka here, the message history per chat
-#each chat can only see thier own history/state
+#each chat can only see their own history/state
     class State(TypedDict):
         messages: Annotated[list, add_messages]
+        #add_messages is the reducer, merges new updates, APPENDS new updates of state rather than overwriting stuff
     # our schema only has messages, in format of add_messages
 #stores as type:humann, message .. in db
 
